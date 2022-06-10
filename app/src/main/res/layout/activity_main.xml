@@ -4,24 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
-    <TextView
-        android:id="@+id/txtWeather"
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_alignTop="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>        android:layout_alignTop="@+id/bottomNavigationView"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Today's weather at Halisahar is "
-        android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:padding="20dp"/>
-    <TextView
-        android:id="@+id/txtWeatherDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="N/A"
-        android:layout_below="@+id/txtWeather"
-        android:layout_centerHorizontal="true"
-        android:textSize="40sp"/>
+        app:menu="@menu/bottom_menu"/>
 
 
 </RelativeLayout>
